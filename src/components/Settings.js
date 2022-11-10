@@ -5,10 +5,11 @@ import { UserContext } from "../context/userContext"
 export const Settings = () => {
     const [val, setVal] = useState("");
     const [greeting, setGreeting] = useContext(UserContext);
-    console.log(greeting);
+
     const handlechange = (event) => {
         setVal(event.target.value);
-        setGreeting(val);
+
+        setGreeting(event.target.value);
 
 
     }
